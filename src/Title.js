@@ -1,15 +1,17 @@
 import React from 'react';
 
-// const Title = ({ children }) => (
-//   <h1>{children}</h1>
-// );
-
-// export default Title;
-
-export default function TitleTwo() {
+export default function Title() {
   return (
-    <div>
-      <h1>title here</h1>
+    <div style={titleStyle}>
+      <h1>Google Book Search</h1>
     </div>
   )
+}
+
+const titleStyle ={
+    background:'#000',
+    color:'#fff',
+    margin: '0px',
+    padding:'20px',
+    textAlign: 'center',
 }
