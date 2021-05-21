@@ -5,8 +5,9 @@ export default function PrintType() {
     <div style={filterItemStyle}>
         <label for="PrintTypeFilter">Print Type:</label>
         <select id="PrintTypeFilter" name="print-type">
-            <option value="one">one</option>
-            <option value="two">two</option>
+            <option value="all">All</option>
+            <option value="books">Books</option>
+            <option value="magazines">Magazines</option>
         </select>
     </div>
   )

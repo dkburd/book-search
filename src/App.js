@@ -2,20 +2,24 @@ import React from "react";
 import Title from './Title';
 import SearchArea from './SearchArea';
 import FilterArea from './FilterArea';
-import BookArea from './BookArea';
+import BookList from './BookList';
 
 
 class App extends React.Component {
-  // state = {
-  //   shoppingItems: [
-  //     /* put stub items in here for testing */
-  //     { name: 'apples', checked: false },
-  //     { name: 'oranges', checked: true },
-  //     { name: 'bread', checked: false },
-  //   ]
-  // };
-
+constructor(props) {
+  super(props);
+  this.state = { 
+    books: [] 
+  };
+  
+  // this.handleClick = this.handleClick.bind(this);
+}
   render() {
+    const getBookList = (anything) => {
+      console.log("GET BOOK LIST CALLED!!!!!")
+      console.log(anything)
+      this.setState({books:anything})
+    }
     return (
       <>
         <header>
@@ -23,11 +27,11 @@ class App extends React.Component {
         </header>
         <main>
           <section>
-            <SearchArea/>
+            <SearchArea getBookList={getBookList}/>
             <FilterArea/>
           </section>
           <section>
-           <BookArea/> 
+           <BookList books = {this.state.books}/> 
           </section>
         </main>
       </>
